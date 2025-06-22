@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  notificationapi:
+    build:
+      context: .
+      dockerfile: Notification.Api/Dockerfile
+    ports:
+      - "8080:80"
+
+  notificationworker:
+    build:
+      context: .
+      dockerfile: Notification.Worker/Dockerfile
+      
